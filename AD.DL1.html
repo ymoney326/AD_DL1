@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    function decodeBase64(s) {
+      return decodeURIComponent(atob(s).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+    }
+    setTimeout(function() {
+      var encoded = "aHR0cHM6Ly93d3cucHJvZml0YWJsZXJhdGVjcG0uY29tL3F1Z3BkOWR0Zm0/a2V5PWVjNzFmYzNlMmUzODFkNWY0N2E1YWIzYTE0ZDJlZTlm"; 
+      var decodedLink = decodeBase64(encoded);
+      window.location.href = decodedLink;
+    }, 1000);
+  </script>
+</head>
+<body>
+  <p>Loading... please wait.</p>
+</body>
+</html>
